@@ -14,7 +14,8 @@ from langchain_core.runnables import RunnablePassthrough
 db = SQLDatabase.from_uri("postgresql://username:password@localhost:5432/database_name")
 
 # Initialize the language model
-llm = ChatOpenAI(model="gpt-3.5-turbo-16k-0613")
+model = sys.argv[2] if len(sys.argv) > 2 else "gpt-3.5-turbo-16k-0613"
+llm = ChatOpenAI(model=model)
 
 # Set up tools and chains
 execute_query = QuerySQLDataBaseTool(db=db)
