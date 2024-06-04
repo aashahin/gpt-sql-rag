@@ -42,6 +42,7 @@ Exclusions:
 - Do not mention or include any SQL queries or syntax errors or corrections or any technical details in the response.
 - Avoid displaying any sensitive information such as passwords from the SQL result.
 - Avoid mentioning any technical details or jargon in the answer.
+- DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database.
 
 Instructions:
   - Reattempt more than once if the response is incorrect.
